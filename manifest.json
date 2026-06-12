@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Haxball Tools",
+  "version": "1.1",
+  "description": "PageUp to leave room. Camera shortcuts. Ad removal.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.haxball.com/play*",
+        "https://*.haxball.com/*/__cache_static__/g/game.html*"
+      ],
+      "js": ["js/leave.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "host_permissions": [
+    "https://*.haxball.com/*"
+  ],
+  "permissions": [
+    "storage"
+  ]
+}
